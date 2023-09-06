@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Short-Term Memory Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thomas' Short-Term Memory Game</h1>
+        <p>Test your memory by recalling previously displayed words.</p>
+        <p>Click "Repeat" if you've seen the word before, or "New Word" if it's a new word.</p>
+        <p>You start with 3 lives, and every incorrect guess costs a life. Try to get the highest score!</p>
+    </header>    <div class="game-container">
+        <div class="word-display" id="wordDisplay"></div>
+        <div class="buttons">
+            <button onclick="checkWord(true)">Repeat</button>
+            <button onclick="checkWord(false)">New Word</button>
+<!-- Initially hidden "Restart" button -->
+<div id="restartContainer" style="display: none;">
+    <button  onclick="restartGame()">Restart</button>
+</div>
+        </div>
+    </div>
+    <div class="info-container">
+        <div class="info-text" id="livesDisplay">Lives: 3</div>
+        <div class="info-text" id="scoreDisplay">Score: 0</div>
+        <div class="info-text" id="highScoreDisplay">High Score: 0</div>
+        <div class="info-text" id="feedbackDisplay"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
